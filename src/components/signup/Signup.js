@@ -26,14 +26,17 @@ function Signup() {
 		setValues({ ...values, error: false, success: true });
 		const data = { name, email, username, password };
 
-		const response = await fetch(`http://localhost:5000/api/v1/users`, {
-			method: "POST",
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		});
+		const response = await fetch(
+			`http://reactblogbackend.herokuapp.com/api/v1/users`,
+			{
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			}
+		);
 
 		const result = await response.json();
 		setValues({

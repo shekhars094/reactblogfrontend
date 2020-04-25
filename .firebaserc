@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "reactblogfrontend",
+    "firebase-react-deploy": "reactblogfrontend"
+  }
+}

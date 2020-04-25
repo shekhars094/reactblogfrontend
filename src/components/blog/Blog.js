@@ -5,13 +5,16 @@ const MyBlog = () => {
 	const [postValue, setPostValue] = useState({ data: [] });
 
 	const getPost = async () => {
-		const response = await fetch(`http://localhost:5000/api/v1/posts`, {
-			method: "GET",
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json",
-			},
-		});
+		const response = await fetch(
+			`http://reactblogbackend.herokuapp.com/api/v1/posts`,
+			{
+				method: "GET",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+				},
+			}
+		);
 		const res = await response.json();
 		console.log(res);
 		setPostValue({ data: res.data });

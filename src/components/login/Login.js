@@ -22,14 +22,17 @@ function LogIn() {
 	const onSubmit = async (event) => {
 		event.preventDefault();
 		const logInData = { email, password };
-		const response = await fetch(`http://localhost:5000/api/v1/login`, {
-			method: "POST",
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(logInData),
-		});
+		const response = await fetch(
+			`http://reactblogbackend.herokuapp.com/api/v1/login`,
+			{
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(logInData),
+			}
+		);
 
 		const result = await response.json();
 		console.log(typeof result);
