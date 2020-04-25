@@ -28,7 +28,7 @@ const UpdateBlog = (props) => {
 		console.log(postId);
 
 		const response = await fetch(
-			`http://reactblogbackend.herokuapp.com/api/v1/user/${userData._id}/post/${postId}`,
+			`https://reactblogbackend.herokuapp.com/api/v1/user/${userData._id}/post/${postId}`,
 			{
 				method: "PATCH",
 				headers: {

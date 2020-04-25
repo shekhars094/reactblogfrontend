@@ -27,7 +27,7 @@ function Signup() {
 		const data = { name, email, username, password };
 
 		const response = await fetch(
-			`http://reactblogbackend.herokuapp.com/api/v1/users`,
+			`https://reactblogbackend.herokuapp.com/api/v1/users`,
 			{
 				method: "POST",
 				headers: {

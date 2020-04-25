@@ -23,7 +23,7 @@ function LogIn() {
 		event.preventDefault();
 		const logInData = { email, password };
 		const response = await fetch(
-			`http://reactblogbackend.herokuapp.com/api/v1/login`,
+			`https://reactblogbackend.herokuapp.com/api/v1/login`,
 			{
 				method: "POST",
 				headers: {

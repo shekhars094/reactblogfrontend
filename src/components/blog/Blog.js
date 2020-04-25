@@ -6,7 +6,7 @@ const MyBlog = () => {
 
 	const getPost = async () => {
 		const response = await fetch(
-			`http://reactblogbackend.herokuapp.com/api/v1/posts`,
+			`https://reactblogbackend.herokuapp.com/api/v1/posts`,
 			{
 				method: "GET",
 				headers: {

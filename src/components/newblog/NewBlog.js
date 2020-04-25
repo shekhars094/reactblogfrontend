@@ -25,7 +25,7 @@ const NewBlog = () => {
 		const userData = JSON.parse(localStorage.getItem("jwt"));
 
 		const response = await fetch(
-			`http://reactblogbackend.herokuapp.com/api/v1/user/${userData._id}/post`,
+			`https://reactblogbackend.herokuapp.com/api/v1/user/${userData._id}/post`,
 			{
 				method: "POST",
 				headers: {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navigation = ({ history }) => {
 	const signOut = () => {
-		fetch(`http://reactblogbackend.herokuapp.com/api/v1/signout`, {
+		fetch(`https://reactblogbackend.herokuapp.com/api/v1/signout`, {
 			method: "GET",
 		});
 

@@ -9,7 +9,7 @@ const MyBlog = () => {
 	const getPost = async () => {
 		if (userData) {
 			const response = await fetch(
-				`http://reactblogbackend.herokuapp.com/api/v1/user/${userData._id}/posts`,
+				`https://reactblogbackend.herokuapp.com/api/v1/user/${userData._id}/posts`,
 				{
 					method: "GET",
 					headers: {
@@ -29,7 +29,7 @@ const MyBlog = () => {
 	const deletePost = async (postId) => {
 		const userData = JSON.parse(localStorage.getItem("jwt"));
 		const response = await fetch(
-			`http://reactblogbackend.herokuapp.com/api/v1/user/${userData._id}/post/${postId}`,
+			`https://reactblogbackend.herokuapp.com/api/v1/user/${userData._id}/post/${postId}`,
 			{
 				method: "DELETE",
 				headers: {
