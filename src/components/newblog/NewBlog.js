@@ -7,10 +7,10 @@ const NewBlog = () => {
 		title: "",
 		post: "",
 		success: false,
-		error: "",
+		error: true,
 	});
 
-	const { title, post, success } = values;
+	const { title, post, success, error } = values;
 
 	const handleChange = (name) => (event) => {
 		setValues({
@@ -51,7 +51,7 @@ const NewBlog = () => {
 				<div className="col-6 offset-3">
 					<div
 						className="alert alert-success"
-						style={{ display: success ? "" : "none" }}>
+						style={{ display: error ? "none" : "" }}>
 						New Post Created Succesfully
 						<Link to="/">Go to Blogs</Link>
 					</div>
@@ -63,6 +63,7 @@ const NewBlog = () => {
 	return (
 		<Container>
 			{successMessage()}
+
 			<Form>
 				<Row>
 					<Col className="col-6 offset-3">

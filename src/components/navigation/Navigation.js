@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
-const Navigation = ({ history }) => {
+const Navigation = (props) => {
 	const signOut = () => {
 		fetch(`https://reactblogbackend.herokuapp.com/api/v1/signout`, {
 			method: "GET",
 		});
 
 		localStorage.removeItem("jwt");
+		props.history.push("/");
 	};
 
 	// const showAuth = () => {
@@ -54,13 +55,7 @@ const Navigation = ({ history }) => {
 			</li>
 
 			<li className="nav-item">
-				<Link
-					className="nav-link text-success"
-					onClick={() => {
-						signOut(() => {
-							history.push("/");
-						});
-					}}>
+				<Link className="nav-link text-success" onClick={signOut}>
 					SingOut
 				</Link>
 			</li>
@@ -68,4 +63,4 @@ const Navigation = ({ history }) => {
 	);
 };
 
-export default Navigation;
+export default withRouter(Navigation);
