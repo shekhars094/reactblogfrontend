@@ -31,16 +31,20 @@ const Navigation = (props) => {
 					Blog
 				</Link>
 			</li>
-			<li className="nav-item">
-				<Link className="nav-link text-success" to="/myblog">
-					My Blog
-				</Link>
-			</li>
-			<li className="nav-item">
-				<Link className="nav-link text-success" to="/newblog">
-					New Blog
-				</Link>
-			</li>
+			{showAuth() && (
+				<li className="nav-item">
+					<Link className="nav-link text-success" to="/myblog">
+						My Blog
+					</Link>
+				</li>
+			)}
+			{showAuth() && (
+				<li className="nav-item">
+					<Link className="nav-link text-success" to="/newblog">
+						New Blog
+					</Link>
+				</li>
+			)}
 
 			{!showAuth() && (
 				<li className="nav-item">
