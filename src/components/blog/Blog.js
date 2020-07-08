@@ -15,8 +15,8 @@ const MyBlog = () => {
 				},
 			}
 		);
+
 		const res = await response.json();
-		console.log(res);
 		setPostValue({ data: res.data });
 	};
 
@@ -25,9 +25,8 @@ const MyBlog = () => {
 	}, [postValue]);
 
 	return (
-		<div className="container">
+		<div>
 			<h3 className="text-center bg-success p-3">Blogs</h3>
-
 			{postValue.data.map((post) => {
 				return (
 					<div className="row bg-info m-5" key={post._id}>
@@ -37,6 +36,10 @@ const MyBlog = () => {
 							</h4>
 							<p className="bg-dark p-5 text-white">
 								{post.post}
+							</p>
+							<p className="bg-danger p-2 text-white">
+								Author: {post.author.name}, Published:{" "}
+								{post.createdAt}
 							</p>
 						</div>
 					</div>

@@ -25,7 +25,7 @@ const Navigation = (props) => {
 	};
 
 	return (
-		<ul className="nav bg-dark mb-4">
+		<ul className="nav bg-dark">
 			<li className="nav-item">
 				<Link className="nav-link text-success" to="/">
 					Blog

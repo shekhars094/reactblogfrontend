@@ -48,6 +48,8 @@ const UpdateBlog = (props) => {
 		});
 	};
 
+	useEffect(() => {}, []);
+
 	const successMessage = () => {
 		return (
 			<div className="row">
